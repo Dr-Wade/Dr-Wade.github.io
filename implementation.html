@@ -1,0 +1,309 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Mozart Ex Machina &mdash; Implémentation</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="La musique peut-elle s'automatiser ?" />
+	<meta name="keywords" content="musique, automatisation, machine, learning, PACE" />
+	<meta name="author" content="Edward Tombre" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Themify Icons-->
+	<link rel="stylesheet" href="css/themify-icons.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Profile Card -->
+    <link rel="stylesheet" href="css/profile-card.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+    <!-- Game -->
+    <script src="js/jeuClassement.js"></script>
+
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+
+	<div class="gtco-loader"></div>
+
+	<div id="page">
+
+
+		<div class="page-inner">
+
+			<div id="head-top" style="position: absolute; width: 100%; top: 0; ">
+				<div class="gtco-top">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-6 col-xs-6">
+								<div id="gtco-logo"><a href="index.html">Mozart Ex Machina <em>.</em></a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<nav class="gtco-nav sticky-banner" role="navigation">
+					<div class="gtco-container">
+
+						<div class="row">
+							<div class="col-xs-12 text-center menu-1">
+								<ul>
+									<li><a href="index.html">Introduction</a></li>
+									<li class="has-dropdown">
+										<a href="inspiration.html">Sur l'inspiration</a>
+										<ul class="dropdown">
+											<li><a href="inspiration.html#debut">Trouver l'inspiration</a></li>
+											<li><a href="inspiration.html#interview">Interview</a></li>
+                                            <li><a href="math.html"> La musique et les maths</a></li>
+                                        </ul>
+									</li>
+									<li class="has-dropdown"><a href="machinelearning.html">Machine-Learning</a>
+                                        <ul class="dropdown">
+											<li><a href="machinelearning.html#intro">Introduction historique</a></li>
+											<li><a href="machinelearning.html#fonctionnement">Fonctionnement</a></li>
+										</ul>
+                                    </li>
+									<li class="has-dropdown"><a href="implementation.html">Mise en pratique</a>
+                                        <ul class="dropdown">
+											<li><a href="implementation.html#implementation">Implémentation</a></li>
+											<li><a href="implementation.html#jeuClassement">Jeu : classer par génération</a></li>
+										</ul>
+                                    </li>
+                                    <li class="has-dropdown"><a href="conclusions.html">Conclusions</a>
+                                        <ul class="dropdown">
+											<li><a href="conclusions.html#jeuAudio">Jeu : qui a composé quoi ?</a></li>
+											<li><a href="conclusions.html#conclusion">Retour sur le sens de meilleur</a></li>
+                                            <li><a href="plusloin.html">Pour aller plus loin</a></li>
+										</ul>
+                                    </li>
+                                    
+									<li><a href="contact.html">Contact</a></li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</nav>
+			</div>
+            <div class="gtco-cover gtco-cover-sm" style="background-image: url(images/img_bg_3.jpg)" data-stellar-background-ratio="0.5" id="implementation">
+				<div class="overlay"></div>
+				<div class="gtco-container text-center">
+					<div class="display-t">
+						<div class="display-tc">
+							<h1 class="animate-box">Créons notre propre musique !</h1>
+						</div>
+					</div>
+				 </div>
+			     </div>
+                
+                <div class="gtco-section">
+				<div class="gtco-container">
+					<div class="row">
+						<div class="col-md-10 col-md-offset-1 gtco-heading animate-box">
+                        <h2 class = "text-center"> Implémentation du code </h2>
+                        <p> Nous y voici, il est temps de coder notre magnifique compositeur de musique ! Pour le côté technique, nous utiliserons le langage Python, pour lequel on trouve des bibliothèques donnant une implémentation des réseaux de neurones ! Et oui, désolé, mais nous n'allons pas coder nous mêmes notre propre réseau de neurones.
+                        La bibliothèque python que nous allons utiliser est nommée Keras. Elle est performante pour réaliser de la prédiction de caractères : étant donné un texte de départ, elle va pouvoir prédire quels sont les caractères les plus susceptibles d'apparaître ensuite. On voit ainsi notre premier défi : convertir de la musique en texte !</p>
+                        
+                        <h3> Conversion d'un fichier midi vers un fichier texte</h3>
+                        <p>Les fichiers musicaux sont usuellement stockés dans un format particulier : outre les types audio (mp3, wav, aac), il existe un format qui contient beaucoup plus d'informations : le format midi. On y trouve l'ensemble des notes jouées, chacune de leur vélocité, le tempo etc. Un petit utilitaire gratuit nous permet de convertir un fichier midi en un fichier csv : c'est un texte respectant un certain format. Voyez plutôt par vous-mêmes. </p>
+                        <img src="images/implementation/midi.jpg" width="660px" height="480px">
+                        <p>On peut repérer plusieurs informations sur ce fichier : celle qui va nous intéresser est l'instruction <em>Note_on_c</em>. Elle indique qu'une note est jouée, et fournit plusieurs informations sur cette dernière (temps, hauteur, vélocité). Voici la structure adoptée par le format csv :</p>
+                            <p style="margin-left:5%"2><em>Numéro de la piste, Temps, Note_on_c, Numéro du canal, Numéro de la note, Vélocité</em></p>
+                            <p>Par exemple, l'instruction <em>2, 4800, Note_on_c, 0, 60, 56</em>  signifie que sur la deuxième piste, sur le canal numéro 0, au temps 4800, la note numérotée 60 (en l'occurrence un do, sur la troisième octave) est jouée avec une vélocité de 56. Les temps considérés sont des temps MIDI absolus (ils ne dépendent pas du tempo), et on en trouve 1920 unités par mesure. Quant à la vélocité, elle est quantifiée de 0 à 127, 0 signifiant que l'on relâche la note, et 127 signifiant que la note est très forte.</p>
+                        <p>Pour utiliser efficacement la prédiction de texte, nous allons réécrire la musique sous la forme suivante :</p>
+                        <ul><li>Nous allons définir un pas de temps, moins précis que le temps définit dans le fichier csv. Par exemple, on peut fixer un pas égal à 40 unités de temps MIDI absolu.</li>
+                            <li>En parcourant le morceau avec le pas précédemment défini, on va écrire successivement les notes jouées dans chaque intervalle de temps. On marquera le passage d'un intervalle au suivant à l'aide d'un espace.</li></ul>
+                        <p>Voici l'implémentation de cette méthode : </p>
+                        
+                            <script src="https://gist.github.com/Dr-Wade/bb8104b2e80cf15c07d745cb8f6ae951.js"></script>
+                            
+                        <p>Essayons d'appliquer ce script à un fichier csv : le résultat ressemble à ceci :</p>
+                            <img src="images/implementation/textebrut.jpg" width="660px" height="480px">
+                        <p>Ce n'est certes pas très digeste à la lecture, mais un ordinateur ne saurait (sans entraînement, tout du moins) faire la différence entre ceci et un poème d'Arthur Rimbaud !</p>
+                        <p>On peut alors se constituer un long fichier texte comportant de nombreux morceaux de musique, qui nous servira de base d'apprentissage.</p>
+                        <h3>L'apprentissage et la création</h3>
+                        <p>Nous sommes uniquement à quelques lignes de code du but : programmer notre ordinateur pour q'il puisse composer. 
+Il reste à écrire le code d'apprentissage et celui de création. Je vous économise ces efforts, les voici :</p>
+                            <script src="https://gist.github.com/Dr-Wade/cfad24627ed99a97d049a4345bb49f4b.js"></script>
+                            
+                            <h3 id="jeuClassement">Résultats de l'implémentation</h3>
+                            <p>Et si on faisait un petit jeu ? Voici quelques bribes de morceaux que mon ordinateur a composé par lui-même, après différents temps d'apprentissage. Saurez-vous les classer dans l'ordre chronologique de l'apprentissage ? </p>
+                            <div class="col-md-10 col-md-offset-1 gtco-heading" style="margin-bottom: 2em">
+                            <div class="col-md-4 col-sm-6 audioPlayer">
+                            <div id="playerContainer1"> </div>
+                            <div class="note">
+                              <p>Extrait n°1</p>
+                            </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 audioPlayer">
+                            <div id="playerContainer2"> </div>
+                            <div class="note">
+                              <p>Extrait n°2</p>
+                            </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 audioPlayer">
+                            <div id="playerContainer3"> </div>
+                            <div class="note">
+                              <p>Extrait n°3</p>
+                            </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 audioPlayer">
+                            <div id="playerContainer4"> </div>
+                            <div class="note">
+                              <p>Extrait n°4</p>
+                            </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 audioPlayer">
+                            <div id="playerContainer5"> </div>
+                            <div class="note">
+                              <p>Extrait n°5</p>
+                            </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 audioPlayer">
+                            <div id="playerContainer6"> </div>
+                            <div class="note">
+                              <p>Extrait n°6</p>
+                            </div>
+                            </div>
+                            <script src="js/audioPlayer.js"></script>
+                        </div>
+                            <section class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                               <section class="panel no-radius even-margin"> 
+                                 <section class="panel-body">   
+                                    <section id="connected">
+                                            <ul class="connected list">
+                                                <li>Extrait 1</li>
+                                                <li>Extrait 2</li>
+                                                <li>Extrait 3</li>
+                                                <li>Extrait 4</li>
+                                                <li>Extrait 5</li>
+                                                <li>Extrait 6</li>
+                                            </ul>
+                                            <ul class="connected list no2">
+
+                                            </ul>
+                                        </section>
+                                 </section>
+                                </section>
+                           </section>
+                            
+                            <div class="col-md-12 text-center">
+                                <button class="btn btn-default"> Vérifier </button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <footer id="gtco-footer" role="contentinfo">
+					<div class="gtco-container">
+						<div class="row row-p	b-md">
+
+							<div class="col-md-4">
+								<div class="gtco-widget">
+									<h3>A propos</h3>
+									<p>Ce site web a été créé dans le cadre du projet PACE à Télécom ParisTech.</p>
+									<p><a href="https://www.telecom-paristech.fr/enseignement/cursus/1re-annee/pratiques-analyses-communication-ecrite.html">En savoir plus...</a></p>
+								</div>
+							</div>
+                            
+                            <div class="col-md-4">
+								<div class="gtco-widget">
+									<h3>Bibliographie</h3>
+									<p>Elle est disponible <a href="bibliographie.html">ici</a>.</p>
+								</div>
+							</div>
+
+            
+                            <div class="col-md-4 col-md-push-1">
+								<div class="gtco-widget">
+									<h3>Me contacter</h3>
+									<ul class="gtco-quick-contact">
+										<li><a href="#"><i class="icon-phone"></i> +33 6 83 95 57 00</a></li>
+										<li><a href="#"><i class="icon-mail2"></i> edward.tombre@telecom-paristech.fr</a></li>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="row copyright">
+							<div class="col-md-12">
+								<p class="pull-left">
+									<small class="block">Site développé par Edward Tombre.</small>
+								</p>
+								<p class="pull-right">
+									<ul class="gtco-social-icons pull-right">
+										<li><a href="https://www.facebook.com/edward.tombre.7"><i class="icon-facebook"></i></a></li>
+										<li><a href="https://fr.linkedin.com/in/edward-tombre-3907ba151"><i class="icon-linkedin"></i></a></li>
+									</ul>
+								</p>
+							</div>
+						</div>
+
+					</div>
+				</footer>
+			</div>
+
+		</div>
+
+		<div class="gototop js-top">
+			<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+		</div>
+
+		<!-- jQuery -->
+		<script src="js/jquery.min.js"></script>
+		<!-- jQuery Easing -->
+		<script src="js/jquery.easing.1.3.js"></script>
+		<!-- Bootstrap -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- Waypoints -->
+		<script src="js/jquery.waypoints.min.js"></script>
+		<script src="js/sticky.js"></script>
+		<!-- Carousel -->
+		<script src="js/owl.carousel.min.js"></script>
+		<!-- countTo -->
+		<script src="js/jquery.countTo.js"></script>
+
+		<!-- Stellar Parallax -->
+		<script src="js/jquery.stellar.min.js"></script>
+
+		<!-- Magnific Popup -->
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<script src="js/magnific-popup-options.js"></script>
+
+		<!-- Main -->
+		<script src="js/main.js"></script>
+
+	</body>
+	</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Mozart Ex Machina &mdash; Machine-Learning</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="La musique peut-elle s'automatiser ?" />
+	<meta name="keywords" content="musique, automatisation, machine, learning, PACE" />
+	<meta name="author" content="Edward Tombre" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Themify Icons-->
+	<link rel="stylesheet" href="css/themify-icons.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Profile Card -->
+    <link rel="stylesheet" href="css/profile-card.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+    <!-- Game -->
+    <script src="js/jeuClassement.js"></script>
+
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+
+	<div class="gtco-loader"></div>
+
+	<div id="page">
+
+
+		<div class="page-inner">
+
+			<div id="head-top" style="position: absolute; width: 100%; top: 0; ">
+				<div class="gtco-top">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-6 col-xs-6">
+								<div id="gtco-logo"><a href="index.html">Mozart Ex Machina <em>.</em></a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<nav class="gtco-nav sticky-banner" role="navigation">
+					<div class="gtco-container">
+
+						<div class="row">
+							<div class="col-xs-12 text-center menu-1">
+								<ul>
+									<li><a href="index.html">Introduction</a></li>
+									<li class="has-dropdown">
+										<a href="inspiration.html">Sur l'inspiration</a>
+										<ul class="dropdown">
+											<li><a href="inspiration.html#debut">Trouver l'inspiration</a></li>
+											<li><a href="inspiration.html#interview">Interview</a></li>
+                                            <li><a href="math.html"> La musique et les maths</a></li>
+										</ul>
+									</li>
+									<li class="has-dropdown"><a href="machinelearning.html">Machine-Learning</a>
+                                        <ul class="dropdown">
+											<li><a href="machinelearning.html#intro">Introduction historique</a></li>
+											<li><a href="machinelearning.html#fonctionnement">Fonctionnement</a></li>
+										</ul>
+                                    </li>
+									<li class="has-dropdown"><a href="implementation.html">Mise en pratique</a>
+                                        <ul class="dropdown">
+											<li><a href="implementation.html#implementation">Implémentation</a></li>
+											<li><a href="implementation.html#jeuClassement">Jeu : classer par génération</a></li>
+										</ul>
+                                    </li>
+                                    <li class="has-dropdown"><a href="conclusions.html">Conclusions</a>
+                                        <ul class="dropdown">
+											<li><a href="conclusions.html#jeuAudio">Jeu : qui a composé quoi ?</a></li>
+											<li><a href="conclusions.html#conclusion">Retour sur le sens de meilleur</a></li>
+                                             <li><a href="plusloin.html">Pour aller plus loin</a></li>
+										</ul>
+                                    </li>
+                                   
+									<li><a href="contact.html">Contact</a></li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</nav>
+			</div>
+            
+
+            <div class="gtco-cover gtco-cover-sm" style="background-image: url(images/img_bg_3.jpg)" data-stellar-background-ratio="0.5" id="intro">
+				<div class="overlay"></div>
+				<div class="gtco-container text-center">
+					<div class="display-t">
+						<div class="display-tc">
+							<h1 class="animate-box">Le machine-learning, késako ?</h1>
+						</div>
+					</div>
+				 </div>
+			     </div>
+                 
+                <div class="gtco-section">
+				<div class="gtco-container">
+					<div class="row">
+						<div class="col-md-10 col-md-offset-1 gtco-heading animate-box">
+                        <h2 class = "text-center"> Introduction historique </h2>
+                        <p> L'idée d'une intelligence artificielle n'est pas récente. Aristote, dans son livre <em>La Politique</em>, écrit :
+« Si chaque instrument pouvait, par ordre ou par pressentiment, accomplir son oeuvre propre, […] alors les maitres d'oeuvre n'auraient plus besoin de manoeuvres, ni les maitres d'esclaves. Les vrais hommes abandonneraient alors les taches viles, si indignes d'eux, pour ne plus se consacrer qu'aux activités de citoyens et à la recherche du savoir et de la sagesse qu'il procure.»</p>
+                        <p>Cependant, il faut attendre le XIXème siècle et l'invention de la machine analytique pour commencer à pouvoir automatiser des opérations sous la forme des premiers programmes, créés par Ada Lovelace. Ce sont là les prémices de l'évolution majeure dont Alan Turing fût l'instigateur : la formalisation des machines de Turing et la création des premiers ordinateurs. Ce dernier était aussi intrigué par la possibilité d'une intelligence artificielle, et s'est intéressé à la discernabilité entre humains et machines, en inventant notamment l'épreuve de Turing : elle sert à déterminer au travers d'une discussion si l'interlocuteur est un humain ou une machine. </p>
+                        <p>En 1956, un camp d'été à Dartmouth réunit 20 scientifiques autour du thème des machines pensantes : c'est à cette date là qu'est née officiellement le terme <em>d'intelligence artificielle</em>. <br> C'était un domaine très prometteur, mais qui a subi un triste déclin dans les années 1960 à cause des nombreux problèmes techniques rencontrés et du manque de moyens financiers. Ainsi, en 1964, un grand projet de traduction automatique et de reconnaissance vocale fût abandonné aux Etats-Unis : ce projet a été finalement mené à bien, plus tard, en donnant notamment naissance à l'assistant vocal Siri d'Apple.</p>
+                        <p>L'intelligence artificielle ressurgit dans les années 1990. C'est en effet le temps du développement des ordinateurs personnels (Personal Computer), accompagné de progrès techniques notamment dans la puissance de calcul. C'est à cette date que débute l'épopée du machine-learning. Et depuis cela, quand on parle d'intelligence artificielle, on fait souvent référence à des algorithmes de machine-learning.</p>
+                        </div>
+                        <div class="col-md-10 col-md-offset-1 gtco-heading animate-box" id="fonctionnement">
+                        <h2 class = "text-center"> Le machine-learning, comment ça marche ? </h2>
+                        <p> Le machine-learning, c'est un processus qui, comme son nom l'indique, permet à une machine d'apprendre à partir d'exemples. Il faut savoir qu'il existe deux grande types d'apprentissage : supervisé et non-supervisé.
+                        On ne s'intéressera qu'à l'apprentissage supervisé par la suite, car moins contraignant lors de l'implémentation.</p>
+                        <p> Prenons un exemple : on veut apprendre à notre ordinateur à reconnaître des images d'instruments de musique. Comment va t-on s'y prendre ? Et bien, nous allons donner beaucoup d'images d'instruments de musique à l'ordinateur, et pour chaque image, donner le nom de l'instrument correspondant. L'ordinateur va alors « apprendre » à reconnaître les instruments de musiques grâce aux exemples qu'on lui donne. Cet apprentissage passe par l'utilisation d'un réseau de <em>neurones</em>. L'appellation fait un parallèle avec le cerveau humain, et ce n'est pas un hasard : la structure est pensée de telle sorte à ce qu'elle puisse imiter une partie du fonctionnement du cerveau humain</p>
+                        <p>Chaque <em>neurone</em> est une fonction mathématique : elle prend en entrée plusieurs paramètres, et donne en sortie un résultat. Ce résultat servira de paramètre pour un nouveau neurone, etc. </p>
+                        <p>C'est lors de de qu'on appelle <strong>l'apprentissage</strong> que l'on construit les fonctions mathématiques qui sont associées aux neurones. Lorsqu'on ajoute des exemples (donc dans notre cas une image avec un nom d'instrument), les fonctions des neurones sont légèrement ajustées pour améliorer la reconnaissance de l'instrument donné. <br> 
+                        Cet ajustement est un processus trop compliqué pour qu'on puisse l'aborder ici : si vous êtes curieux, je vous invite à regarder la vidéo de Science étonnante à ce sujet. <br> <br>
+                        <iframe width="560" height="315" style="margin-left:20%" src="https://www.youtube.com/embed/trWrEWfhTVg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+                        <br><br>
+                        <p>Lorsqu'on a finit l'apprentissage, on peut demander au réseau de neurone de reconnaître un instrument de musique. On lui soumet en entrée l'image de l'instrument : cette image passera par le réseau, chaque neurone va appliquer sa fonction, et en sortie, on aura un nom.</p>
+                        </div>
+                    </div>
+                 </div>
+                 </div>
+                
+                
+
+<footer id="gtco-footer" role="contentinfo">
+					<div class="gtco-container">
+						<div class="row row-p	b-md">
+
+							<div class="col-md-4">
+								<div class="gtco-widget">
+									<h3>A propos</h3>
+									<p>Ce site web a été créé dans le cadre du projet PACE à Télécom ParisTech.</p>
+									<p><a href="https://www.telecom-paristech.fr/enseignement/cursus/1re-annee/pratiques-analyses-communication-ecrite.html">En savoir plus...</a></p>
+								</div>
+							</div>
+
+                            <div class="col-md-4">
+								<div class="gtco-widget">
+									<h3>Bibliographie</h3>
+									<p>Elle est disponible <a href="bibliographie.html">ici</a>.</p>
+								</div>
+							</div>
+            
+                            <div class="col-md-4 col-md-push-1">
+								<div class="gtco-widget">
+									<h3>Me contacter</h3>
+									<ul class="gtco-quick-contact">
+										<li><a href="#"><i class="icon-phone"></i> +33 6 83 95 57 00</a></li>
+										<li><a href="#"><i class="icon-mail2"></i> edward.tombre@telecom-paristech.fr</a></li>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="row copyright">
+							<div class="col-md-12">
+								<p class="pull-left">
+									<small class="block">Site développé par Edward Tombre.</small>
+								</p>
+								<p class="pull-right">
+									<ul class="gtco-social-icons pull-right">
+										<li><a href="https://www.facebook.com/edward.tombre.7"><i class="icon-facebook"></i></a></li>
+										<li><a href="https://fr.linkedin.com/in/edward-tombre-3907ba151"><i class="icon-linkedin"></i></a></li>
+									</ul>
+								</p>
+							</div>
+						</div>
+
+					</div>
+				</footer>
+			</div>
+
+		</div>
+
+		<div class="gototop js-top">
+			<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+		</div>
+
+		<!-- jQuery -->
+		<script src="js/jquery.min.js"></script>
+		<!-- jQuery Easing -->
+		<script src="js/jquery.easing.1.3.js"></script>
+		<!-- Bootstrap -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- Waypoints -->
+		<script src="js/jquery.waypoints.min.js"></script>
+		<script src="js/sticky.js"></script>
+		<!-- Carousel -->
+		<script src="js/owl.carousel.min.js"></script>
+		<!-- countTo -->
+		<script src="js/jquery.countTo.js"></script>
+
+		<!-- Stellar Parallax -->
+		<script src="js/jquery.stellar.min.js"></script>
+
+		<!-- Magnific Popup -->
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<script src="js/magnific-popup-options.js"></script>
+
+		<!-- Main -->
+		<script src="js/main.js"></script>
+
+	</body>
+	</html>

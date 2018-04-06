@@ -1,0 +1,287 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Mozart Ex Machina &mdash; Musique et Maths</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="La musique peut-elle s'automatiser ?" />
+	<meta name="keywords" content="musique, automatisation, machine, learning, PACE" />
+	<meta name="author" content="Edward Tombre" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Themify Icons-->
+	<link rel="stylesheet" href="css/themify-icons.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Profile Card -->
+    <link rel="stylesheet" href="css/profile-card.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+    <!-- Game -->
+    <script src="js/jeuClassement.js"></script>
+
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+
+	<div class="gtco-loader"></div>
+
+	<div id="page">
+
+
+		<div class="page-inner">
+
+			<div id="head-top" style="position: absolute; width: 100%; top: 0; ">
+				<div class="gtco-top">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-6 col-xs-6">
+								<div id="gtco-logo"><a href="index.html">Mozart Ex Machina <em>.</em></a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<nav class="gtco-nav sticky-banner" role="navigation">
+					<div class="gtco-container">
+
+						<div class="row">
+							<div class="col-xs-12 text-center menu-1">
+								<ul>
+									<li><a href="index.html">Introduction</a></li>
+									<li class="has-dropdown">
+										<a href="inspiration.html">Sur l'inspiration</a>
+										<ul class="dropdown">
+											<li><a href="inspiration.html#debut">Trouver l'inspiration</a></li>
+											<li><a href="inspiration.html#interview">Interview</a></li>
+                                            <li><a href="math.html"> La musique et les maths</a></li>
+                                        </ul>
+									</li>
+									<li class="has-dropdown"><a href="machinelearning.html">Machine-Learning</a>
+                                        <ul class="dropdown">
+											<li><a href="machinelearning.html#intro">Introduction historique</a></li>
+											<li><a href="machinelearning.html#fonctionnement">Fonctionnement</a></li>
+										</ul>
+                                    </li>
+									<li class="has-dropdown"><a href="implementation.html">Mise en pratique</a>
+                                        <ul class="dropdown">
+											<li><a href="implementation.html#implementation">Implémentation</a></li>
+											<li><a href="implementation.html#jeuClassement">Jeu : classer par génération</a></li>
+										</ul>
+                                    </li>
+                                    <li class="has-dropdown"><a href="conclusions.html">Conclusions</a>
+                                        <ul class="dropdown">
+											<li><a href="conclusions.html#jeuAudio">Jeu : qui a composé quoi ?</a></li>
+											<li><a href="conclusions.html#conclusion">Retour sur le sens de meilleur</a></li>
+                                            <li><a href="plusloin.html">Pour aller plus loin</a></li>
+										</ul>
+                                    </li>
+									<li><a href="contact.html">Contact</a></li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</nav>
+			</div>
+            
+            
+             <div class="gtco-cover gtco-cover-sm" style="background-image: url(images/img_bg_3.jpg)" data-stellar-background-ratio="0.5">
+				<div class="overlay"></div>
+				<div class="gtco-container text-center">
+					<div class="display-t">
+						<div class="display-tc">
+							<h1 class="animate-box">Un lien entre la musique et les mathématiques ?</h1>
+						</div>
+					</div>
+				 </div>
+			     </div>
+                
+                <div class="gtco-section">
+				<div class="gtco-container">
+					<div class="row">
+						<div class="col-md-10 col-md-offset-1 gtco-heading animate-box">
+				            <blockquote class="quote-card">
+                                <p>
+                                La musique est un exercice d’arithmétique secrète, et celui qui s'y livre ignore qu'il manie les nombres.
+                                </p>
+                                <cite>
+                                Leibniz
+                                </cite>
+                            </blockquote>
+                            
+							<p>Je n'ai pas tout de suite réalisé à quel point cette citation reflétait une vérité assez méconnue.
+                                Essayons d'imaginer un instant que la musique n'a jamais encore existé. Comment pourrait-on définir les douze notes de la gamme chromatique, les accords qui sont harmonieux, les intervalles qui font à l'inverse siffler les oreilles ? D'ailleurs, pourquoi y a-t-il douze notes de musique ? La solution est mathématique, et provient de la presque égalité suivante : </p>
+                            <div class="col-md-12 text-center"> <p> <strong> 2<sup>19</sup> &asymp; 3<sup>12</sup> </strong></p> </div>
+                            <p>Si l'on considère un son, il possède non seulement une fréquence fondamentale, mais aussi des harmoniques, qui sont tous les multiples de la fondamentale. Toutes les harmoniques seront (comme leur nom l'indique) en harmonie avec la fréquence fondamentale : cette propriété va nous permettre de comprendre d'où vient la gamme actuelle, dite chromatique. </p>
+                            <p>Supposons que l'on prenne une fréquence de départ, <em>au hasard</em>, 440 Hz . </p>
+                            <p>En prenant certaines de ces harmoniques, on peut reconstruire de nouvelles notes. <br>
+                                Par exemple, si l'on prend la deuxième harmonique (fréquence multipliée par 2), on obtient ce que l'on appelle <strong> l'octave</strong>. <br>
+                                Autre exemple, si l'on prend la troisième harmonique (fréquence multipliée par 3), on obtient une nouvelle note, qui sonne harmonieusement avec la première : on l'appelle <strong> la quinte</strong>.<br>
+                                Pour en finir avec les exemples, si l'on prend la cinquième harmonique, on construit ce qu'on appelle <strong> la tierce</strong>.
+                            </p>
+                            <p>Par des multiplications successives, on peut construire encore de nouvelles notes. Observons cela par un tableau, construit de la manière suivante. Chaque colonne représente une nouvelle note, obtenue en passant à la quinte la note précédente. Comment il existe plusieurs octaves pour une même note, nous mettrons plusieurs lignes pour représenter plusieurs octaves. Chaque case du tableau contient la fréquence (en Hz) de la note</p>
+                            <div class="table-responsive table-bordered movie-table">
+                            <table class="table movie-table">
+                            <thead>
+                                <tr class= "movie-table-head">
+                                  <th>Numéro de la note</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th>
+                                  <th>7</th><th>8</th><th>9</th> <th>10</th><th>11</th><th>12</th><th>13</th>
+                              </tr>
+                          </thead>   
+                          <tbody>
+
+                            <!--row-->
+                            <tr class= "dark-row">
+                                <td >Octave 1 </td><td> 55 </td><td> 83 </td><td> 62 </td><td> 46 </td><td> 70 </td><td> 52 </td>   
+                                <td> 78 </td><td> 59 </td><td> 44 </td><td> 66 </td><td> 49 </td><td> 37 </td><td> 56 </td>   
+                            </tr>
+                            <tr class="light-row">
+                                <td >Octave 2 </td><td> 110 </td><td> 165 </td><td> 124 </td><td> 93 </td><td> 139 </td><td> 104 </td>   
+                                <td> 157 </td><td> 117 </td><td> 88 </td><td> 132 </td><td> 99 </td><td> 74 </td><td> 112 </td>                                   
+                            </tr>
+                            <tr class = "dark-row">
+                                <td >Octave 3 </td><td> 220 </td><td> 330 </td><td> 248 </td><td> 186 </td><td> 278 </td><td> 209 </td>   
+                                <td> 313 </td><td> 235 </td><td> 176 </td><td> 264 </td><td> 198 </td><td> 149 </td><td> 223 </td>  
+                            </tr>
+                            <tr class="light-row">
+                                <td >Octave 4 </td><td> 440 </td><td> 660 </td><td> 495 </td><td> 371 </td><td> 557 </td><td> 418 </td>   
+                                <td> 626 </td><td> 470 </td><td> 352 </td><td> 529 </td><td> 396 </td><td> 397 </td><td> 446 </td>                                     
+                            </tr>
+                            <tr class = "dark-row">
+                                <td >Octave 5 </td><td> 880 </td><td> 1320 </td><td> 990 </td><td> 743 </td><td> 1114 </td><td> 835 </td>   
+                                <td> 1253 </td><td> 940 </td><td> 705 </td><td> 1057 </td><td> 793 </td><td> 595 </td><td> 892 </td>  
+                            </tr>
+
+                          </tbody>
+                        </table>
+				        </div>  
+                        <p>On constate que les notes numéro 1 et numéro 13 sont quasiment identique : elles ont presque les mêmes fréquences ! On a donc réussi à retomber sur notre première note en ne faisant que des passages à la quinte.</p>    
+                        <p>En termes mathématiques, passer à la quinte revient à multiplier par 3 la fréquence. Lorsqu'on fait cela, on change d'octave en passant à une octave supérieure : par exemple, nous avons fait 55x3=165, ce qui nous fait passer de l'octave 1 à l'octave 2. Ce n'est pas gênant en soit, mais il est préférable pour nous de ne pas changer d'octave lors de nos calculs. Comment fait-on pour revenir à l'octave 1 après le passage à la quinte ? Il suffit de diviser par 2 la fréquence, pour baisser d'une octave. Malheureusement, dans certains cas, ce n'est pas que d'une octave, mais de deux que nous montons. Alors, nous devons diviser par 4 la fréquence pour revenir à l'octave initiale.</p>
+                            <p> Pour conclure, il a fallu 12 passages à la quinte pour revenir à notre note initiale. Parmi ces 12 passages, 7 ont nécessité une division par 4 pour revenir à l'octave initiale (les autres ne demandant qu'une division par 2). Nous en déduisons donc que  3<sup>12</sup> / 2<sup>19</sup> &asymp; 1. Cela est équivalent à 2<sup>19</sup> &asymp; 3<sup>12</sup>.</p>
+                        <br><br>
+                        <p>Maintenant, on comprend d'où viennent les 12 notes que l'on connaît : et pour la petite anecdote, la fréquence que j'ai choisie <em>au hasard</em> pour tout reconstruire n'est autre que la note de référence pour accorder les instruments de musique : le <strong>LA</strong>.</p>
+                        <p>Vous l'aurez remarqué, il existe quand même un petit écart entre la note numéro 1 et la note numéro 13, et celui ci va nous compliquer la tâche.
+                            En effet, la dernière quinte va sonner moins juste que les autres : on l'appelle <strong>la quinte du loup</strong>. <br>
+                            Pendant des centaines d'années, jusqu'au XVème siècle, les musiciens se sont arrangés pour que cette quinte du loup soit placé entre deux notes peu utilisées (le La bémol et le Mi bémol) pour que l'écoute soit la plus agréable possible. On appelle ce mode d'accordage le <strong>tempérament pythagoricien</strong>. <br>
+                            Cela explique pourquoi beaucoup des œuvres du Moyen-Age ne sont pas écrites en La bémol, et aussi pourquoi elles utilisent beaucoup l'octave et la quinte dans leur harmonies : en voici un exemple.</p>
+                        <iframe width="560" height="315" style="margin-left:20%" src="https://www.youtube.com/embed/SgHzH5iDcGQ?start=233" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>    
+                            <br><br>
+                        <p>Pour pallier ce problème de dissonance, il a été décidé de répartir l'erreur d'harmonie entre la note numéro 1 et la note numéro 13 (qui est de 7Hz) sur l'ensemble des douze notes. Ainsi, toutes les notes que nous jouons sont <em>un tout petit peu fausse </em>, c'est à dire qu'elles ne sont jamais en harmonie parfaite avec la fondamentale, mais l'écart de justesse est si faible que l'on ne peut pas le percevoir. Ce système est appelé le <strong>tempérament égal</strong>.</p>
+                        <p> Dans son œuvre « Le clavier bien tempéré », Bach a composé deux œuvres pour chacune des 12 gammes : utiliser un tempérament égal est alors obligatoire, sans quoi il existerait une gamme dans laquelle les œuvres sonneront fausses, à cause de la quinte du loup. Or, le tempérament égal n'existait pas encore à l'époque de Bach. Où était alors son astuce pour pouvoir jouer toutes ses compositions sans se heurter à la quinte du loup ? Les spécialistes s'accordent (sans mauvais jeu de mots) à dire qu'il tempérait lui-même son instrument avant de jouer pour s'adapter à la gamme de l'œuvre.  </p>
+                        <p> Ainsi, la construction de la musique est de nature mathématique. C'est encourageant pour notre but : cependant, bien que l'on puisse déterminer des accords harmonieux à l'aide de ces principes mathématiques, ce n'est pas suffisant pour composer un morceau entier. Pour atteindre ce but, il nous faut faire appel à une science dont raffole les cinéastes : <strong> l'intelligence artificielle</strong>.</p>
+                    </div>
+                </div>
+                </div>
+                
+                <footer id="gtco-footer" role="contentinfo">
+					<div class="gtco-container">
+						<div class="row row-p	b-md">
+
+							<div class="col-md-4">
+								<div class="gtco-widget">
+									<h3>A propos</h3>
+									<p>Ce site web a été créé dans le cadre du projet PACE à Télécom ParisTech.</p>
+									<p><a href="https://www.telecom-paristech.fr/enseignement/cursus/1re-annee/pratiques-analyses-communication-ecrite.html">En savoir plus...</a></p>
+								</div>
+							</div>
+
+                            <div class="col-md-4">
+								<div class="gtco-widget">
+									<h3>Bibliographie</h3>
+									<p>Elle est disponible <a href="bibliographie.html">ici</a>.</p>
+								</div>
+							</div>
+            
+                            <div class="col-md-4 col-md-push-1">
+								<div class="gtco-widget">
+									<h3>Me contacter</h3>
+									<ul class="gtco-quick-contact">
+										<li><a href="#"><i class="icon-phone"></i> +33 6 83 95 57 00</a></li>
+										<li><a href="#"><i class="icon-mail2"></i> edward.tombre@telecom-paristech.fr</a></li>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="row copyright">
+							<div class="col-md-12">
+								<p class="pull-left">
+									<small class="block">Site développé par Edward Tombre.</small>
+								</p>
+								<p class="pull-right">
+									<ul class="gtco-social-icons pull-right">
+										<li><a href="https://www.facebook.com/edward.tombre.7"><i class="icon-facebook"></i></a></li>
+										<li><a href="https://fr.linkedin.com/in/edward-tombre-3907ba151"><i class="icon-linkedin"></i></a></li>
+									</ul>
+								</p>
+							</div>
+						</div>
+
+					</div>
+				</footer>
+			</div>
+
+		</div>
+
+		<div class="gototop js-top">
+			<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+		</div>
+
+		<!-- jQuery -->
+		<script src="js/jquery.min.js"></script>
+		<!-- jQuery Easing -->
+		<script src="js/jquery.easing.1.3.js"></script>
+		<!-- Bootstrap -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- Waypoints -->
+		<script src="js/jquery.waypoints.min.js"></script>
+		<script src="js/sticky.js"></script>
+		<!-- Carousel -->
+		<script src="js/owl.carousel.min.js"></script>
+		<!-- countTo -->
+		<script src="js/jquery.countTo.js"></script>
+
+		<!-- Stellar Parallax -->
+		<script src="js/jquery.stellar.min.js"></script>
+
+		<!-- Magnific Popup -->
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<script src="js/magnific-popup-options.js"></script>
+
+		<!-- Main -->
+		<script src="js/main.js"></script>
+
+	</body>
+	</html>
