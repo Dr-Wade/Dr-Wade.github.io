@@ -2444,4 +2444,109 @@ form label {
     
     background: ;
 }
+/* Jeu interactif */
+.connected, .sortable, .exclude, .handles {
+margin: auto;
+padding: 0;
+width: 310px;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+.sortable.grid {
+overflow: hidden;
+}
+.connected li, .sortable li, .exclude li, .handles li {
+    color: #313135;
+    list-style: none;
+    border: 1px solid #e8e8e8;
+    background: #fff;
+    font-family: "Tahoma";
+    margin: 5px;
+    padding: 10px 6px;
+    box-shadow: 1px 2px 4px #d6d6d6;
+	cursor:pointer;
+}
+.no2 > li{
+color:#fff;
+ background:#56b5e3;
+ border: 1px solid #56b5e3;
+}
 
+.handles span {
+cursor: move;
+}
+li.disabled {
+opacity: 0.5;
+}
+.sortable.grid li {
+line-height: 80px;
+float: left;
+width: 80px;
+height: 80px;
+text-align: center;
+}
+li.highlight {
+background: #edede5;
+}
+#connected {
+width: 80%;
+overflow: hidden;
+margin: auto;
+}
+.connected {
+float: left;
+width: 48%;
+min-height:324px;
+background:#f6f6f6;
+margin:5px;
+}
+.connected.no2 {
+float: right;
+}
+.sortable-placeholder {
+background:#e8e8e8;
+ padding: 10px 6px;
+}
+
+/* Audio player */
+.note {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.circle-audio-player {
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.audioPlayer{
+    text-align:center;
+}
+#playerContainer {
+  padding: 24px;
+}
+/* Quiz*/
+.question{
+    font-weight: bold;
+}
+.answers {
+    margin-bottom: 20px;
+    font-weight: lighter;
+}
+#submit{
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: #297;
+    color: #fff;
+    border: 0px;
+    border-radius: 3px;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+#submit:hover{
+    background-color: #3a8;
+}
