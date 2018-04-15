@@ -1688,7 +1688,7 @@ form label {
 }
 
 .js .animate-box {
-  opacity: 1;
+  opacity: 0;
 }
 
 @media screen and (max-width: 768px) {
