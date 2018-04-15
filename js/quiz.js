@@ -21,7 +21,7 @@ var myQuestions = [
             a: 'Un humain',
             b: 'Un ordinateur',
         },
-        correctAnswer: 'b'
+        correctAnswer: 'a'
     },
     {
         question: "Qui a composé l'extrait n°4 ?",
@@ -37,7 +37,7 @@ var myQuestions = [
             a: 'Un humain',
             b: 'Un ordinateur',
         },
-        correctAnswer: 'b'
+        correctAnswer: 'a'
     },
     {
         question: "Qui a composé l'extrait n°6 ?",
@@ -45,13 +45,21 @@ var myQuestions = [
             a: 'Un humain',
             b: 'Un ordinateur',
         },
-        correctAnswer: 'b'
+        correctAnswer: 'a'
     }
 ];
 
 var quizContainer = document.getElementById('quiz');
 var resultsContainer = document.getElementById('results');
 var submitButton = document.getElementById('submit');
+
+var commentaire = [ "La puissance de l'IA est alors telle qu'elle réussit à imiter parfaitement la composition humaine.",
+                   "La puissance de l'IA est alors telle qu'elle réussit à imiter parfaitement la composition humaine.",
+                   "L'IA semble en bonne voie dans son but de devenir indiscernable des compositeurs humains.",
+                   "L'IA semble en bonne voie dans son but de devenir indiscernable des compositeurs humains.",
+                   "Bravo ! Nous voyons là que l'IA n'est pas encore assez performante pour vous dupez plus d'une fois.",
+                   "Bravo ! Nous voyons là que l'IA n'est pas encore assez performante pour vous dupez plus d'une fois.",
+                   "Bravo ! Vous avez l'oreille fine : l'IA n'a pas su vous tromper. "];
 
 generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
 
@@ -125,7 +133,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
         }
 
         // show number of correct answers out of total
-        resultsContainer.innerHTML ='<p>Vous avez répondu correctement à ' + numCorrect + ' question(s) sur ' + questions.length+'</p>';
+        resultsContainer.innerHTML ='<p>Vous avez identifié correctement ' + numCorrect +' extrait(s) sur ' + questions.length+ '<br>'+commentaire[numCorrect]+'</p>';
     }
 
     // show questions right away

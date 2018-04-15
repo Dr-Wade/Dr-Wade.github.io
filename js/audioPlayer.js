@@ -298,42 +298,42 @@ CircleAudioPlayer.prototype = {
 
 // now init one as an example
 var cap1 = new CircleAudioPlayer({
-	audio: 'http://www.html5tutorial.info/media/vincent.mp3',
+	audio: 'sound/quizAudio/eh1.mp3',
   size: 120,
   borderWidth: 8
 });
 cap1.appendTo(playerContainer1);
 
 var cap2 = new CircleAudioPlayer({
-	audio: 'http://www.html5tutorial.info/media/vincent.mp3',
+	audio: 'sound/quizAudio/eh3.mp3',
   size: 120,
   borderWidth: 8
 });
 cap2.appendTo(playerContainer2);
 
 var cap3 = new CircleAudioPlayer({
-	audio: 'http://www.html5tutorial.info/media/vincent.mp3',
+	audio: 'sound/quizAudio/ep2.mp3',
   size: 120,
   borderWidth: 8
 });
 cap3.appendTo(playerContainer3);
 
 var cap4 = new CircleAudioPlayer({
-	audio: 'http://www.html5tutorial.info/media/vincent.mp3',
+	audio: 'sound/quizAudio/eh2.mp3',
   size: 120,
   borderWidth: 8
 });
 cap4.appendTo(playerContainer4);
 
 var cap5 = new CircleAudioPlayer({
-	audio: 'http://www.html5tutorial.info/media/vincent.mp3',
+	audio: 'sound/quizAudio/ep1.mp3',
   size: 120,
   borderWidth: 8
 });
 cap5.appendTo(playerContainer5);
 
 var cap6 = new CircleAudioPlayer({
-	audio: 'http://www.html5tutorial.info/media/vincent.mp3',
+	audio: 'sound/quizAudio/ep3.mp3',
   size: 120,
   borderWidth: 8
 });
