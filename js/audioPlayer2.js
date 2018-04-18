@@ -295,45 +295,45 @@ CircleAudioPlayer.prototype = {
 	}
 };
 
-
-var cap1 = new CircleAudioPlayer({
-	audio: 'sound/quizAudio/eh1.mp3',
+var cap10 = new CircleAudioPlayer({
+	audio: 'sound/compo/epoch13.mp3',
   size: 120,
   borderWidth: 8
 });
-cap1.appendTo(playerContainer1);
+cap10.appendTo(playerContainer10);
 
-var cap2 = new CircleAudioPlayer({
-	audio: 'sound/quizAudio/eh3.mp3',
+var cap20 = new CircleAudioPlayer({
+	audio: 'sound/compo/epoch63.mp3',
   size: 120,
   borderWidth: 8
 });
-cap2.appendTo(playerContainer2);
+cap20.appendTo(playerContainer20);
 
-var cap3 = new CircleAudioPlayer({
-	audio: 'sound/quizAudio/ep2.mp3',
+var cap30 = new CircleAudioPlayer({
+	audio: 'sound/compo/epoch3.mp3',
   size: 120,
   borderWidth: 8
 });
-cap3.appendTo(playerContainer3);
+cap30.appendTo(playerContainer30);
 
-var cap4 = new CircleAudioPlayer({
-	audio: 'sound/quizAudio/eh2.mp3',
+var cap40 = new CircleAudioPlayer({
+	audio: 'sound/compo/epoch117.mp3',
   size: 120,
   borderWidth: 8
 });
-cap4.appendTo(playerContainer4);
+cap40.appendTo(playerContainer40);
 
-var cap5 = new CircleAudioPlayer({
-	audio: 'sound/quizAudio/ep1.mp3',
+var cap50 = new CircleAudioPlayer({
+	audio: 'sound/compo/epoch84.mp3',
   size: 120,
   borderWidth: 8
 });
-cap5.appendTo(playerContainer5);
+cap50.appendTo(playerContainer50);
 
-var cap6 = new CircleAudioPlayer({
-	audio: 'sound/quizAudio/ep3.mp3',
+var cap60 = new CircleAudioPlayer({
+	audio: 'sound/compo/epoch33.mp3',
   size: 120,
   borderWidth: 8
 });
-cap6.appendTo(playerContainer6);
+cap60.appendTo(playerContainer60);
+

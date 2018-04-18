@@ -52,6 +52,16 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+    <style>
+    #div1, #div2 {
+        float: left;
+        width: 200px;
+        height: 75px;
+        margin: 2px;
+        padding: 2px;
+        border: 1px solid black;
+    }
+    </style>
 </head>
 <body>
 
@@ -160,66 +170,71 @@ Il reste à écrire le code d'apprentissage et celui de création. Je vous écon
                             <p>Et si on faisait un petit jeu ? Voici quelques bribes de morceaux que mon ordinateur a composé par lui-même, après différents temps d'apprentissage. Saurez-vous les classer dans l'ordre chronologique de l'apprentissage ? </p>
                             <div class="col-md-10 col-md-offset-1 gtco-heading" style="margin-bottom: 2em">
                             <div class="col-md-4 col-sm-6 audioPlayer">
-                            <div id="playerContainer1"> </div>
+                            <div id="playerContainer10"> </div>
                             <div class="note">
                               <p>Extrait n°1</p>
                             </div>
                             </div>
                             <div class="col-md-4 col-sm-6 audioPlayer">
-                            <div id="playerContainer2"> </div>
+                            <div id="playerContainer20"> </div>
                             <div class="note">
                               <p>Extrait n°2</p>
                             </div>
                             </div>
                             <div class="col-md-4 col-sm-6 audioPlayer">
-                            <div id="playerContainer3"> </div>
+                            <div id="playerContainer30"> </div>
                             <div class="note">
                               <p>Extrait n°3</p>
                             </div>
                             </div>
                             <div class="col-md-4 col-sm-6 audioPlayer">
-                            <div id="playerContainer4"> </div>
+                            <div id="playerContainer40"> </div>
                             <div class="note">
                               <p>Extrait n°4</p>
                             </div>
                             </div>
                             <div class="col-md-4 col-sm-6 audioPlayer">
-                            <div id="playerContainer5"> </div>
+                            <div id="playerContainer50"> </div>
                             <div class="note">
                               <p>Extrait n°5</p>
                             </div>
                             </div>
                             <div class="col-md-4 col-sm-6 audioPlayer">
-                            <div id="playerContainer6"> </div>
+                            <div id="playerContainer60"> </div>
                             <div class="note">
                               <p>Extrait n°6</p>
                             </div>
                             </div>
-                            <script src="js/audioPlayer.js"></script>
+                            <script src="js/audioPlayer2.js"></script>
                         </div>
-                            <section class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                               <section class="panel no-radius even-margin"> 
-                                 <section class="panel-body">   
-                                    <section id="connected">
-                                            <ul class="connected list">
-                                                <li>Extrait 1</li>
-                                                <li>Extrait 2</li>
-                                                <li>Extrait 3</li>
-                                                <li>Extrait 4</li>
-                                                <li>Extrait 5</li>
-                                                <li>Extrait 6</li>
-                                            </ul>
-                                            <ul class="connected list no2">
+                            <div class="col-md-10 col-md-offset-1">
+                            <ol data-draggable="target">
+                              <li data-draggable="item">Extrait 1 </li>
+                              <li data-draggable="item">Extrait 2 </li>
+                              <li data-draggable="item">Extrait 3 </li>
+                              <li data-draggable="item">Extrait 4 </li>
+                              <li data-draggable="item">Extrait 5 </li>
+                              <li data-draggable="item">Extrait 6 </li>
+                            </ol>
 
-                                            </ul>
-                                        </section>
-                                 </section>
-                                </section>
-                           </section>
-                            
-                            <div class="col-md-12 text-center">
-                                <button class="btn btn-default"> Vérifier </button>
+                            <ol data-draggable="target">
+
+                            </ol>
+                            <script src="js/drag.js"></script>
                             </div>
+                            <div class="col-md-12 text-center">
+                                <p>
+                                  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    Vérifier
+                                  </a>
+                                </p>
+                                <div class="collapse" id="collapseExample">
+                                  <div class="card card-body">
+                                    L'ordre exact est le suivant : 3-1-6-2-5-4. Avez vous vu juste ?
+                                  </div>
+                                </div>
+                            </div>
+                            
                             
                         </div>
                     </div>
